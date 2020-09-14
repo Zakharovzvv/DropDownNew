@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.dropdown-wrapper {
+  position: relative;
+  font-size: 1em;
+}
+.dropdown-wrapper.open .dropdown-list {
+  display: block;
+}
+.dropdown-input {
+  height: 40px;
+  padding: 0 1rem;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.dropdown-input:focus {
+  outline: none;
+  border: 1px solid #ccc;
+}
+.dropdown-list {
+  position: absolute;
+  display: none;
+  top: 40px;
+  left: 0;
+  right: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  max-height: 30vh;
+  overflow-y: auto;
+  box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.dropdown-list .item {
+  list-style-type: none;
+  cursor: pointer;
+  border-bottom: 1px solid #ccc;
+  transition: background 0.2s ease-in;
+  padding: 1rem;
+}
+.dropdown-list .item:hover {
+  background: #eee;
+}
+.dropdown-list .item.selected {
+  background: bisque;
+}
+
+.fas {
+  position: absolute;
+  right: 0px;
+  top: 0;
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  cursor: pointer;
+  background: transparent;
+}
+
+/*# sourceMappingURL=style.css.map */

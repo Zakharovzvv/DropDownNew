@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap')
+$inputHeight:40px
+$border: 1px solid #ccc
+*
+  padding: 0
+  margin: 0
+  box-sizing: border-box
+
+body
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  font-family: 'Roboto', sans-serif
+.container
+ // margin: 0 auto
+.dropdown
+  &-wrapper
+    position: relative
+    font-size: 1em
+    &.open
+      .dropdown-list
+        display: block
+  &-input
+    height: $inputHeight
+    padding: 0 1rem
+    width: 300px
+    border: $border
+    border-radius: 5px
+    &:focus
+      outline: none
+      border: $border
+
+  &-list
+    position: absolute
+    display: none
+    top: $inputHeight
+    left: 0
+    right: 0
+    border: $border
+    border-radius: 5px
+    max-height: 30vh
+    overflow-y: auto
+    box-shadow: 2px 3px 5px rgba(0,0,0,.3)
+    .item
+      list-style-type: none
+      cursor: pointer
+      border-bottom: $border
+      transition: background 0.2s ease-in
+      padding: 1rem
+      &:hover
+        background: #eee
+      &.selected
+        background: bisque
+.fas
+  position: absolute
+  right: 0px
+  top: 0
+  height: $inputHeight
+  width: $inputHeight
+  font-size: $inputHeight
+  cursor: pointer
+  background: transparent
+
